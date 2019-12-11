@@ -25,9 +25,7 @@ public class SearchBltDir {
     }
 
     public boolean init() {
-        // 正则表达式规则
         String regEx = mRegEx;
-        // 编译正则表达式
         mPattern = Pattern.compile(regEx);
         return (mMap != null);
     }
