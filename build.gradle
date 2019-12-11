@@ -1,0 +1,7 @@
+group 'com.nimo'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    Platform
+}
