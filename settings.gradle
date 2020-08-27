@@ -1,3 +1,4 @@
 rootProject.name = 'pctools'
 include 'exceltool'
 include 'getKernelBuiltSource'
+include ':dropbox'
