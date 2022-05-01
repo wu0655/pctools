@@ -28,6 +28,9 @@ public class MainTest {
 
         String in_path = args[0];
         String kern_path = kern_src.getAbsolutePath();
+        System.out.println("kern_path= " + kern_path);
+        System.out.println("built_path= " + in_path);
+
         long start = System.currentTimeMillis();
         long curr = 0;
         BuildAnalysis test = new BuildAnalysis(kern_path, in_path);

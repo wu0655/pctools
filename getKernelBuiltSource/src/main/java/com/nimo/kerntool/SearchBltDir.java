@@ -43,7 +43,7 @@ public class SearchBltDir {
                 else if (f.isDirectory()) {
                     doSearchDir(f);
                 } else {
-                    if (HandleFile(f))
+                    if (HandleDtbFile(f))
                         count++;
                 }
             }
@@ -54,7 +54,21 @@ public class SearchBltDir {
         return count;
     }
 
-    private boolean HandleFile(File f) {
+    public boolean HandleDtbFile(File f) {
+        String key;
+        String val;
+
+        String name = f.getName();
+        String path = f.getAbsolutePath();
+
+        if (path.endsWith("dtb.d.pre.tmp")) {
+            mMap.put(path, name);
+        }
+
+        return true;
+    }
+
+    public boolean HandleFile(File f) {
         String key;
         String val;
 
